@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Excel", "Excel.dtproj", "{950A3FE2-7692-4479-B4FE-1D4E3F0D77FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{950A3FE2-7692-4479-B4FE-1D4E3F0D77FB}.Development|Default.ActiveCfg = Development
+		{950A3FE2-7692-4479-B4FE-1D4E3F0D77FB}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7DED99C-43D6-406D-A3D0-6D193234C49E}
+	EndGlobalSection
+EndGlobal

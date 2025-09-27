@@ -1,0 +1,2605 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/6/2025 7:55:14 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="JCASTILLO-1"
+  DTS:CreatorName="RAYOGAS\analistabi"
+  DTS:DTSID="{C2AF8A81-4491-4405-9E8A-8127289D866B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
+  DTS:LocaleID="9226"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{D998C81A-05C0-486D-852E-323B36DD6177}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{01965FF2-0F14-4792-817E-DDCEC1349590}"
+      DTS:ObjectName="Administrador de conexiones con Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=D:\Rayogas\Sistemas de Informacion - Estrategia de Datos\7. Fuentes de Informacion\Xls\TI\Satisfaccion.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{8D06FCB0-B4BB-478A-8688-0428FCD285F1}"
+      DTS:ObjectName="Administrador de conexiones con Excel 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=D:\Rayogas\Sistemas de Informacion - Estrategia de Datos\7. Fuentes de Informacion\Xls\Comercial\Presupuesto\Formato Asignacion OPC.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{90D333A8-7E32-4343-9C4E-ABD681706DFE}"
+      DTS:ObjectName="Administrador de conexiones con Excel 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=D:\OneDrive - Rayogas\Ventas Rayo y Alma\Maestros BI\Presupuestos por vendedor granel y cilindros.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 3]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{C7DF8C52-6F53-42C9-8FDF-60A965926025}"
+      DTS:ObjectName="Administrador de conexiones con Excel 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=D:\Rayogas\Sistemas de Informacion - Estrategia de Datos\7. Fuentes de Informacion\Xls\Control Interno\Resultados Auditoria.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[JCASTILLO-1\JCASTILLO.PruebasUnoEE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0C5AFC62-BF2A-4A57-97EE-B7457D906EF4}"
+      DTS:ObjectName="JCASTILLO-1\JCASTILLO.PruebasUnoEE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=JCASTILLO-1\JCASTILLO;Initial Catalog=PruebasUnoEE;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{0C5AFC62-BF2A-4A57-97EE-B7457D906EF4}JCASTILLO-1\JCASTILLO.PruebasUnoEE;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SVRV-BD2.DataStage]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5DCFA782-8896-414C-9573-03544363DC89}"
+      DTS:ObjectName="SVRV-BD2.DataStage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=SVRV-BD2;Initial Catalog=DataStage;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{5DCFA782-8896-414C-9573-03544363DC89}SVRV-BD2.DataStage;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Pruebas_Integracion"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D7496F8B-F6E8-4435-B301-6DF4D0FFD59B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Pruebas_Integracion"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Pruebas_Integracion\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Hoja1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Pruebas_Integracion\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel 3]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Planta]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Planta]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Planta]"
+                      name="Planta"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2019_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Enero 2019_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2019_Comisión]"
+                      name="Enero 2019_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2019_Comisión]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Febrero 2019_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2019_Comisión]"
+                      name="Febrero 2019_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Marzo 2019_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Marzo 2019_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Marzo 2019_Comisión]"
+                      name="Marzo 2019_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Abril 2019_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Abril 2019_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Abril 2019_Comisión]"
+                      name="Abril 2019_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Mayo 2019_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mayo 2019_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Mayo 2019_Comisión]"
+                      name="Mayo 2019_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Junio 2019_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Junio 2019_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Junio 2019_Comisión]"
+                      name="Junio 2019_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Julio 2019_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Julio 2019_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Julio 2019_Comisión]"
+                      name="Julio 2019_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Agosto 2019_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Agosto 2019_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Agosto 2019_Comisión]"
+                      name="Agosto 2019_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Septiembre 2019_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Septiembre 2019_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Septiembre 2019_Comisión]"
+                      name="Septiembre 2019_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Octubre 2019_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Octubre 2019_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Octubre 2019_Comisión]"
+                      name="Octubre 2019_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Noviembre 2019_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Noviembre 2019_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Noviembre 2019_Comisión]"
+                      name="Noviembre 2019_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Diciembre 2019_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Diciembre 2019_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Diciembre 2019_Comisión]"
+                      name="Diciembre 2019_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2020_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Enero 2020_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2020_Comisión]"
+                      name="Enero 2020_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2020_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Febrero 2020_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2020_Comisión]"
+                      name="Febrero 2020_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Marzo 2020_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Marzo 2020_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Marzo 2020_Comisión]"
+                      name="Marzo 2020_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Mayo 2020_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mayo 2020_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Mayo 2020_Comisión]"
+                      name="Mayo 2020_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Junio 2020_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Junio 2020_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Junio 2020_Comisión]"
+                      name="Junio 2020_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Julio 2020_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Julio 2020_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Julio 2020_Comisión]"
+                      name="Julio 2020_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Agosto 2020_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Agosto 2020_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Agosto 2020_Comisión]"
+                      name="Agosto 2020_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Septiembre 2020_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Septiembre 2020_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Septiembre 2020_Comisión]"
+                      name="Septiembre 2020_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Octubre 2020_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Octubre 2020_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Octubre 2020_Comisión]"
+                      name="Octubre 2020_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Noviembre 2020_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Noviembre 2020_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Noviembre 2020_Comisión]"
+                      name="Noviembre 2020_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2021_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Enero 2021_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2021_Comisión]"
+                      name="Enero 2021_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2021_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Febrero 2021_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2021_Comisión]"
+                      name="Febrero 2021_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Marzo 2021_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Marzo 2021_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Marzo 2021_Comisión]"
+                      name="Marzo 2021_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Abril 2021_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Abril 2021_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Abril 2021_Comisión]"
+                      name="Abril 2021_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Mayo 2021_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mayo 2021_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Mayo 2021_Comisión]"
+                      name="Mayo 2021_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Junio 2021_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Junio 2021_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Junio 2021_Comisión]"
+                      name="Junio 2021_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Julio 2021_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Julio 2021_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Julio 2021_Comisión]"
+                      name="Julio 2021_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Agosto 2021_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Agosto 2021_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Agosto 2021_Comisión]"
+                      name="Agosto 2021_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Septiembre 2021_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Septiembre 2021_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Septiembre 2021_Comisión]"
+                      name="Septiembre 2021_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Octubre 2021_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Octubre 2021_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Octubre 2021_Comisión]"
+                      name="Octubre 2021_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Noviembre 2021_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Noviembre 2021_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Noviembre 2021_Comisión]"
+                      name="Noviembre 2021_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Diciembre 2021_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Diciembre 2021_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Diciembre 2021_Comisión]"
+                      name="Diciembre 2021_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2022_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Enero 2022_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2022_Comisión]"
+                      name="Enero 2022_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2022_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Febrero 2022_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2022_Comisión]"
+                      name="Febrero 2022_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Marzo 2022_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Marzo 2022_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Marzo 2022_Comisión]"
+                      name="Marzo 2022_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Abril 2022_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Abril 2022_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Abril 2022_Comisión]"
+                      name="Abril 2022_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Mayo 2022_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mayo 2022_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Mayo 2022_Comisión]"
+                      name="Mayo 2022_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Junio 2022_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Junio 2022_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Junio 2022_Comisión]"
+                      name="Junio 2022_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Agosto 2022_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Agosto 2022_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Agosto 2022_Comisión]"
+                      name="Agosto 2022_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Septiembre 2022_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Septiembre 2022_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Septiembre 2022_Comisión]"
+                      name="Septiembre 2022_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Octubre 2022_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Octubre 2022_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Octubre 2022_Comisión]"
+                      name="Octubre 2022_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Noviembre 2022_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Noviembre 2022_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Noviembre 2022_Comisión]"
+                      name="Noviembre 2022_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Diciembre 2022_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Diciembre 2022_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Diciembre 2022_Comisión]"
+                      name="Diciembre 2022_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2023_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Enero 2023_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2023_Comisión]"
+                      name="Enero 2023_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2023_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Febrero 2023_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2023_Comisión]"
+                      name="Febrero 2023_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Marzo 2023_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Marzo 2023_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Marzo 2023_Comisión]"
+                      name="Marzo 2023_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Abril 2023_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Abril 2023_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Abril 2023_Comisión]"
+                      name="Abril 2023_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Mayo 2023_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mayo 2023_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Mayo 2023_Comisión]"
+                      name="Mayo 2023_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Junio 2023_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Junio 2023_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Junio 2023_Comisión]"
+                      name="Junio 2023_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Julio 2023_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Julio 2023_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Julio 2023_Comisión]"
+                      name="Julio 2023_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Julio 2023_Comisión1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Julio 2023_Comisión1]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Julio 2023_Comisión1]"
+                      name="Julio 2023_Comisión1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Agosto 2023_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Agosto 2023_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Agosto 2023_Comisión]"
+                      name="Agosto 2023_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Septiembre 2023_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Septiembre 2023_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Septiembre 2023_Comisión]"
+                      name="Septiembre 2023_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Octubre 2023_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Octubre 2023_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Octubre 2023_Comisión]"
+                      name="Octubre 2023_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2024_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Enero 2024_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2024_Comisión]"
+                      name="Enero 2024_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2024_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Febrero 2024_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2024_Comisión]"
+                      name="Febrero 2024_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Junio 2024_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Junio 2024_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Junio 2024_Comisión]"
+                      name="Junio 2024_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Julio 2024_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Julio 2024_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Julio 2024_Comisión]"
+                      name="Julio 2024_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Agosto 2024_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Agosto 2024_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Agosto 2024_Comisión]"
+                      name="Agosto 2024_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Octubre 2024_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Octubre 2024_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Octubre 2024_Comisión]"
+                      name="Octubre 2024_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Noviembre 2024_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Noviembre 2024_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Noviembre 2024_Comisión]"
+                      name="Noviembre 2024_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Diciembre 2024_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Diciembre 2024_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Diciembre 2024_Comisión]"
+                      name="Diciembre 2024_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2025_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Enero 2025_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2025_Comisión]"
+                      name="Enero 2025_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2025_Comisión]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Febrero 2025_Comisión]"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2025_Comisión]"
+                      name="Febrero 2025_Comisión"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Planta]"
+                      dataType="wstr"
+                      length="255"
+                      name="Planta" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Enero 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Enero 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Febrero 2019_Comisión]"
+                      dataType="r8"
+                      name="Febrero 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Marzo 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Marzo 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Abril 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Abril 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mayo 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mayo 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Junio 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Junio 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Julio 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Julio 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Agosto 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Agosto 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Septiembre 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Septiembre 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Octubre 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Octubre 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Noviembre 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Noviembre 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Diciembre 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Diciembre 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Enero 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Enero 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Febrero 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Febrero 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Marzo 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Marzo 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mayo 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mayo 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Junio 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Junio 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Julio 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Julio 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Agosto 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Agosto 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Septiembre 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Septiembre 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Octubre 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Octubre 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Noviembre 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Noviembre 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Enero 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Enero 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Febrero 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Febrero 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Marzo 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Marzo 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Abril 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Abril 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mayo 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mayo 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Junio 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Junio 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Julio 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Julio 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Agosto 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Agosto 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Septiembre 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Septiembre 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Octubre 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Octubre 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Noviembre 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Noviembre 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Diciembre 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Diciembre 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Enero 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Enero 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Febrero 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Febrero 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Marzo 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Marzo 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Abril 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Abril 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mayo 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mayo 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Junio 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Junio 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Agosto 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Agosto 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Septiembre 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Septiembre 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Octubre 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Octubre 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Noviembre 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Noviembre 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Diciembre 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Diciembre 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Enero 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Enero 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Febrero 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Febrero 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Marzo 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Marzo 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Abril 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Abril 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mayo 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mayo 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Junio 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Junio 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Julio 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Julio 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Julio 2023_Comisión1]"
+                      dataType="wstr"
+                      length="255"
+                      name="Julio 2023_Comisión1" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Agosto 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Agosto 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Septiembre 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Septiembre 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Octubre 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Octubre 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Enero 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Enero 2024_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Febrero 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Febrero 2024_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Junio 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Junio 2024_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Julio 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Julio 2024_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Agosto 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Agosto 2024_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Octubre 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Octubre 2024_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Noviembre 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Noviembre 2024_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Diciembre 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Diciembre 2024_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Enero 2025_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Enero 2025_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Febrero 2025_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Febrero 2025_Comisión" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Planta]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Planta]"
+                      name="Planta" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Enero 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Enero 2019_Comisión]"
+                      name="Enero 2019_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Febrero 2019_Comisión]"
+                      dataType="r8"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Febrero 2019_Comisión]"
+                      name="Febrero 2019_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Marzo 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Marzo 2019_Comisión]"
+                      name="Marzo 2019_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Abril 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Abril 2019_Comisión]"
+                      name="Abril 2019_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Mayo 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Mayo 2019_Comisión]"
+                      name="Mayo 2019_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Junio 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Junio 2019_Comisión]"
+                      name="Junio 2019_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Julio 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Julio 2019_Comisión]"
+                      name="Julio 2019_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Agosto 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Agosto 2019_Comisión]"
+                      name="Agosto 2019_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Septiembre 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Septiembre 2019_Comisión]"
+                      name="Septiembre 2019_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Octubre 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Octubre 2019_Comisión]"
+                      name="Octubre 2019_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Noviembre 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Noviembre 2019_Comisión]"
+                      name="Noviembre 2019_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Diciembre 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Diciembre 2019_Comisión]"
+                      name="Diciembre 2019_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Enero 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Enero 2020_Comisión]"
+                      name="Enero 2020_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Febrero 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Febrero 2020_Comisión]"
+                      name="Febrero 2020_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Marzo 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Marzo 2020_Comisión]"
+                      name="Marzo 2020_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Mayo 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Mayo 2020_Comisión]"
+                      name="Mayo 2020_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Junio 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Junio 2020_Comisión]"
+                      name="Junio 2020_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Julio 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Julio 2020_Comisión]"
+                      name="Julio 2020_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Agosto 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Agosto 2020_Comisión]"
+                      name="Agosto 2020_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Septiembre 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Septiembre 2020_Comisión]"
+                      name="Septiembre 2020_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Octubre 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Octubre 2020_Comisión]"
+                      name="Octubre 2020_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Noviembre 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Noviembre 2020_Comisión]"
+                      name="Noviembre 2020_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Enero 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Enero 2021_Comisión]"
+                      name="Enero 2021_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Febrero 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Febrero 2021_Comisión]"
+                      name="Febrero 2021_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Marzo 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Marzo 2021_Comisión]"
+                      name="Marzo 2021_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Abril 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Abril 2021_Comisión]"
+                      name="Abril 2021_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Mayo 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Mayo 2021_Comisión]"
+                      name="Mayo 2021_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Junio 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Junio 2021_Comisión]"
+                      name="Junio 2021_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Julio 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Julio 2021_Comisión]"
+                      name="Julio 2021_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Agosto 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Agosto 2021_Comisión]"
+                      name="Agosto 2021_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Septiembre 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Septiembre 2021_Comisión]"
+                      name="Septiembre 2021_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Octubre 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Octubre 2021_Comisión]"
+                      name="Octubre 2021_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Noviembre 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Noviembre 2021_Comisión]"
+                      name="Noviembre 2021_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Diciembre 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Diciembre 2021_Comisión]"
+                      name="Diciembre 2021_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Enero 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Enero 2022_Comisión]"
+                      name="Enero 2022_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Febrero 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Febrero 2022_Comisión]"
+                      name="Febrero 2022_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Marzo 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Marzo 2022_Comisión]"
+                      name="Marzo 2022_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Abril 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Abril 2022_Comisión]"
+                      name="Abril 2022_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Mayo 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Mayo 2022_Comisión]"
+                      name="Mayo 2022_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Junio 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Junio 2022_Comisión]"
+                      name="Junio 2022_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Agosto 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Agosto 2022_Comisión]"
+                      name="Agosto 2022_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Septiembre 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Septiembre 2022_Comisión]"
+                      name="Septiembre 2022_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Octubre 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Octubre 2022_Comisión]"
+                      name="Octubre 2022_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Noviembre 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Noviembre 2022_Comisión]"
+                      name="Noviembre 2022_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Diciembre 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Diciembre 2022_Comisión]"
+                      name="Diciembre 2022_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Enero 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Enero 2023_Comisión]"
+                      name="Enero 2023_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Febrero 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Febrero 2023_Comisión]"
+                      name="Febrero 2023_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Marzo 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Marzo 2023_Comisión]"
+                      name="Marzo 2023_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Abril 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Abril 2023_Comisión]"
+                      name="Abril 2023_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Mayo 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Mayo 2023_Comisión]"
+                      name="Mayo 2023_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Junio 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Junio 2023_Comisión]"
+                      name="Junio 2023_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Julio 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Julio 2023_Comisión]"
+                      name="Julio 2023_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Julio 2023_Comisión1]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Julio 2023_Comisión1]"
+                      name="Julio 2023_Comisión1" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Agosto 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Agosto 2023_Comisión]"
+                      name="Agosto 2023_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Septiembre 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Septiembre 2023_Comisión]"
+                      name="Septiembre 2023_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Octubre 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Octubre 2023_Comisión]"
+                      name="Octubre 2023_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Enero 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Enero 2024_Comisión]"
+                      name="Enero 2024_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Febrero 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Febrero 2024_Comisión]"
+                      name="Febrero 2024_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Junio 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Junio 2024_Comisión]"
+                      name="Junio 2024_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Julio 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Julio 2024_Comisión]"
+                      name="Julio 2024_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Agosto 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Agosto 2024_Comisión]"
+                      name="Agosto 2024_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Octubre 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Octubre 2024_Comisión]"
+                      name="Octubre 2024_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Noviembre 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Noviembre 2024_Comisión]"
+                      name="Noviembre 2024_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Diciembre 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Diciembre 2024_Comisión]"
+                      name="Diciembre 2024_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Enero 2025_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Enero 2025_Comisión]"
+                      name="Enero 2025_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Febrero 2025_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[Febrero 2025_Comisión]"
+                      name="Febrero 2025_Comisión" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Pruebas_Integracion\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[xls].[ControlInterno]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Pruebas_Integracion\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SVRV-BD2.DataStage]"
+                  connectionManagerRefId="Package.ConnectionManagers[SVRV-BD2.DataStage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Planta]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Planta"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Planta]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Planta]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Enero 2019_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Enero 2019_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Enero 2019_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2019_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Febrero 2019_Comisión]"
+                      cachedDataType="r8"
+                      cachedName="Febrero 2019_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Febrero 2019_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2019_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Marzo 2019_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Marzo 2019_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Marzo 2019_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Marzo 2019_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Abril 2019_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Abril 2019_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Abril 2019_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Abril 2019_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Mayo 2019_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Mayo 2019_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mayo 2019_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Mayo 2019_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Junio 2019_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Junio 2019_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Junio 2019_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Junio 2019_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Julio 2019_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Julio 2019_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Julio 2019_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Julio 2019_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Agosto 2019_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Agosto 2019_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agosto 2019_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Agosto 2019_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Septiembre 2019_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Septiembre 2019_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Septiembre 2019_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Septiembre 2019_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Octubre 2019_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Octubre 2019_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Octubre 2019_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Octubre 2019_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Noviembre 2019_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Noviembre 2019_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Noviembre 2019_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Noviembre 2019_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Diciembre 2019_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Diciembre 2019_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Diciembre 2019_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Diciembre 2019_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Enero 2020_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Enero 2020_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Enero 2020_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2020_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Febrero 2020_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Febrero 2020_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Febrero 2020_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2020_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Marzo 2020_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Marzo 2020_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Marzo 2020_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Marzo 2020_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Mayo 2020_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Mayo 2020_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mayo 2020_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Mayo 2020_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Junio 2020_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Junio 2020_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Junio 2020_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Junio 2020_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Julio 2020_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Julio 2020_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Julio 2020_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Julio 2020_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Agosto 2020_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Agosto 2020_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agosto 2020_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Agosto 2020_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Septiembre 2020_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Septiembre 2020_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Septiembre 2020_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Septiembre 2020_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Octubre 2020_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Octubre 2020_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Octubre 2020_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Octubre 2020_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Noviembre 2020_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Noviembre 2020_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Noviembre 2020_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Noviembre 2020_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Enero 2021_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Enero 2021_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Enero 2021_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2021_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Febrero 2021_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Febrero 2021_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Febrero 2021_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2021_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Marzo 2021_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Marzo 2021_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Marzo 2021_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Marzo 2021_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Abril 2021_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Abril 2021_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Abril 2021_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Abril 2021_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Mayo 2021_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Mayo 2021_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mayo 2021_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Mayo 2021_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Junio 2021_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Junio 2021_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Junio 2021_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Junio 2021_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Julio 2021_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Julio 2021_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Julio 2021_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Julio 2021_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Agosto 2021_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Agosto 2021_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agosto 2021_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Agosto 2021_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Septiembre 2021_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Septiembre 2021_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Septiembre 2021_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Septiembre 2021_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Octubre 2021_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Octubre 2021_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Octubre 2021_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Octubre 2021_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Noviembre 2021_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Noviembre 2021_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Noviembre 2021_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Noviembre 2021_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Diciembre 2021_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Diciembre 2021_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Diciembre 2021_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Diciembre 2021_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Enero 2022_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Enero 2022_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Enero 2022_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2022_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Febrero 2022_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Febrero 2022_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Febrero 2022_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2022_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Marzo 2022_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Marzo 2022_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Marzo 2022_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Marzo 2022_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Abril 2022_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Abril 2022_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Abril 2022_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Abril 2022_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Mayo 2022_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Mayo 2022_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mayo 2022_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Mayo 2022_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Junio 2022_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Junio 2022_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Junio 2022_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Junio 2022_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Agosto 2022_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Agosto 2022_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agosto 2022_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Agosto 2022_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Septiembre 2022_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Septiembre 2022_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Septiembre 2022_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Septiembre 2022_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Octubre 2022_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Octubre 2022_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Octubre 2022_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Octubre 2022_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Noviembre 2022_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Noviembre 2022_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Noviembre 2022_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Noviembre 2022_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Diciembre 2022_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Diciembre 2022_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Diciembre 2022_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Diciembre 2022_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Enero 2023_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Enero 2023_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Enero 2023_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2023_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Febrero 2023_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Febrero 2023_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Febrero 2023_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2023_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Marzo 2023_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Marzo 2023_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Marzo 2023_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Marzo 2023_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Abril 2023_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Abril 2023_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Abril 2023_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Abril 2023_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Mayo 2023_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Mayo 2023_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mayo 2023_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Mayo 2023_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Junio 2023_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Junio 2023_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Junio 2023_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Junio 2023_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Julio 2023_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Julio 2023_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Julio 2023_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Julio 2023_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Julio 2023_Comisión1]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Julio 2023_Comisión1"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Julio 2023_Comisión1]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Julio 2023_Comisión1]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Agosto 2023_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Agosto 2023_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agosto 2023_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Agosto 2023_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Septiembre 2023_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Septiembre 2023_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Septiembre 2023_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Septiembre 2023_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Octubre 2023_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Octubre 2023_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Octubre 2023_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Octubre 2023_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Enero 2024_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Enero 2024_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Enero 2024_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2024_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Febrero 2024_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Febrero 2024_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Febrero 2024_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2024_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Junio 2024_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Junio 2024_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Junio 2024_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Junio 2024_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Julio 2024_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Julio 2024_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Julio 2024_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Julio 2024_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Agosto 2024_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Agosto 2024_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agosto 2024_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Agosto 2024_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Octubre 2024_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Octubre 2024_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Octubre 2024_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Octubre 2024_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Noviembre 2024_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Noviembre 2024_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Noviembre 2024_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Noviembre 2024_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Diciembre 2024_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Diciembre 2024_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Diciembre 2024_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Diciembre 2024_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Enero 2025_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Enero 2025_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Enero 2025_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Enero 2025_Comisión]" />
+                    <inputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Febrero 2025_Comisión]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Febrero 2025_Comisión"
+                      externalMetadataColumnId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Febrero 2025_Comisión]"
+                      lineageId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output].Columns[Febrero 2025_Comisión]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Planta]"
+                      dataType="wstr"
+                      length="255"
+                      name="Planta" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Enero 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Enero 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Febrero 2019_Comisión]"
+                      dataType="r8"
+                      name="Febrero 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Marzo 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Marzo 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Abril 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Abril 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mayo 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mayo 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Junio 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Junio 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Julio 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Julio 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agosto 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Agosto 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Septiembre 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Septiembre 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Octubre 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Octubre 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Noviembre 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Noviembre 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Diciembre 2019_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Diciembre 2019_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Enero 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Enero 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Febrero 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Febrero 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Marzo 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Marzo 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mayo 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mayo 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Junio 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Junio 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Julio 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Julio 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agosto 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Agosto 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Septiembre 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Septiembre 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Octubre 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Octubre 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Noviembre 2020_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Noviembre 2020_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Enero 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Enero 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Febrero 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Febrero 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Marzo 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Marzo 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Abril 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Abril 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mayo 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mayo 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Junio 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Junio 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Julio 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Julio 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agosto 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Agosto 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Septiembre 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Septiembre 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Octubre 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Octubre 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Noviembre 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Noviembre 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Diciembre 2021_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Diciembre 2021_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Enero 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Enero 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Febrero 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Febrero 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Marzo 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Marzo 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Abril 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Abril 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mayo 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mayo 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Junio 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Junio 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agosto 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Agosto 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Septiembre 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Septiembre 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Octubre 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Octubre 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Noviembre 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Noviembre 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Diciembre 2022_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Diciembre 2022_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Enero 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Enero 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Febrero 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Febrero 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Marzo 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Marzo 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Abril 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Abril 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mayo 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mayo 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Junio 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Junio 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Julio 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Julio 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Julio 2023_Comisión1]"
+                      dataType="wstr"
+                      length="255"
+                      name="Julio 2023_Comisión1" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agosto 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Agosto 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Septiembre 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Septiembre 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Octubre 2023_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Octubre 2023_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Enero 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Enero 2024_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Febrero 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Febrero 2024_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Junio 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Junio 2024_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Julio 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Julio 2024_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agosto 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Agosto 2024_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Octubre 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Octubre 2024_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Noviembre 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Noviembre 2024_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Diciembre 2024_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Diciembre 2024_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Enero 2025_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Enero 2025_Comisión" />
+                    <externalMetadataColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Febrero 2025_Comisión]"
+                      dataType="wstr"
+                      length="255"
+                      name="Febrero 2025_Comisión" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Pruebas_Integracion\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Pruebas_Integracion\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Pruebas_Integracion\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Pruebas_Integracion\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Pruebas_Integracion.Paths[Excel Source Output]"
+              endId="Package\Pruebas_Integracion\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Pruebas_Integracion\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="176,42.6666666666667"
+          Id="Package\Pruebas_Integracion"
+          TopLeft="438.124980414287,150.14999284029" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Pruebas_Integracion">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="139.333333333334,42.6666666666667"
+          Id="Package\Pruebas_Integracion\Excel Source"
+          TopLeft="581.249974016101,100.749995195866" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Pruebas_Integracion\OLE DB Destination"
+          TopLeft="629.999971836806,244.3999883461" />
+        <EdgeLayout
+          Id="Package\Pruebas_Integracion.Paths[Excel Source Output]"
+          TopLeft="650.916640682768,143.416661862532">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="65.0833311540385,100.983326483568"
+              Start="0,0"
+              End="65.0833311540385,93.4833264835678">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.4916632417839" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.4916632417839"
+                    Point2="0,50.4916632417839"
+                    Point3="4,50.4916632417839" />
+                  <mssgle:LineSegment
+                    End="61.0833311540385,50.4916632417839" />
+                  <mssgle:CubicBezierSegment
+                    Point1="61.0833311540385,50.4916632417839"
+                    Point2="65.0833311540385,50.4916632417839"
+                    Point3="65.0833311540385,54.4916632417839" />
+                  <mssgle:LineSegment
+                    End="65.0833311540385,93.4833264835678" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Pruebas_Integracion\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Pruebas_Integracion\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

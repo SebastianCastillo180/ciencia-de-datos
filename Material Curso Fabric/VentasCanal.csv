@@ -1,0 +1,501 @@
+NumPedido;Canal;DetalleCanal
+B-25601;B2B;Tienda Física
+B-25602;B2B;Ecommerce
+B-25603;B2B;Afiliado
+B-25604;B2C;Redes Sociales
+B-25605;B2B;Tienda Física
+B-25606;B2B;Tienda Física
+B-25607;B2C;Tienda Física
+B-25608;B2C;Tienda Física
+B-25609;B2C;Ecommerce
+B-25610;B2C;Tienda Física
+B-25611;B2B;Tienda Física
+B-25612;B2B;Ecommerce
+B-25613;B2C;Tienda Física
+B-25614;B2C;Tienda Física
+B-25615;B2C;Tienda Física
+B-25616;B2C;Tienda Física
+B-25617;B2C;Ecommerce
+B-25618;B2C;Ecommerce
+B-25619;B2C;Ecommerce
+B-25620;B2C;Ecommerce
+B-25621;B2C;Ecommerce
+B-25622;B2C;Afiliado
+B-25623;B2B;Afiliado
+B-25624;B2B;Afiliado
+B-25625;B2B;Afiliado
+B-25626;B2B;Afiliado
+B-25627;B2B;Afiliado
+B-25628;B2B;Ecommerce
+B-25629;B2B;Afiliado
+B-25630;B2B;Afiliado
+B-25631;B2B;Afiliado
+B-25632;B2C;Afiliado
+B-25633;B2C;Afiliado
+B-25634;B2C;Ecommerce
+B-25635;B2C;Afiliado
+B-25636;B2C;Afiliado
+B-25637;B2C;Afiliado
+B-25638;B2C;Afiliado
+B-25639;B2C;Redes Sociales
+B-25640;B2C;Afiliado
+B-25641;B2C;Afiliado
+B-25642;B2C;Ecommerce
+B-25643;B2C;Tienda Física
+B-25644;B2C;Tienda Física
+B-25645;B2C;Tienda Física
+B-25646;B2C;Redes Sociales
+B-25647;B2C;Tienda Física
+B-25648;B2C;Tienda Física
+B-25649;B2C;Tienda Física
+B-25650;B2C;Redes Sociales
+B-25651;B2C;Redes Sociales
+B-25652;B2C;Redes Sociales
+B-25653;B2C;Redes Sociales
+B-25654;B2C;Redes Sociales
+B-25655;B2B;Redes Sociales
+B-25656;B2B;Redes Sociales
+B-25657;B2B;Redes Sociales
+B-25658;B2B;Redes Sociales
+B-25659;B2B;Redes Sociales
+B-25660;B2B;Redes Sociales
+B-25661;B2B;Tienda Física
+B-25662;B2B;Tienda Física
+B-25663;B2B;Tienda Física
+B-25664;B2B;Tienda Física
+B-25665;B2B;Tienda Física
+B-25666;B2C;Redes Sociales
+B-25667;B2C;Tienda Física
+B-25668;B2C;Tienda Física
+B-25669;B2C;Tienda Física
+B-25670;B2C;Tienda Física
+B-25671;B2C;Tienda Física
+B-25672;B2C;Tienda Física
+B-25673;B2C;Tienda Física
+B-25674;B2C;Redes Sociales
+B-25675;B2C;Redes Sociales
+B-25676;B2C;Redes Sociales
+B-25677;B2C;Redes Sociales
+B-25678;B2C;Redes Sociales
+B-25679;B2C;Ecommerce
+B-25680;B2C;Ecommerce
+B-25681;B2C;Ecommerce
+B-25682;B2C;Ecommerce
+B-25683;B2B;Tienda Física
+B-25684;B2B;Tienda Física
+B-25685;B2B;Redes Sociales
+B-25686;B2B;Tienda Física
+B-25687;B2B;Tienda Física
+B-25688;B2B;Tienda Física
+B-25689;B2B;Tienda Física
+B-25690;B2B;Tienda Física
+B-25691;B2B;Redes Sociales
+B-25692;B2B;Redes Sociales
+B-25693;B2B;Redes Sociales
+B-25694;B2B;Afiliado
+B-25695;B2B;Afiliado
+B-25696;B2B;Afiliado
+B-25697;B2C;Afiliado
+B-25698;B2C;Afiliado
+B-25699;B2C;Afiliado
+B-25700;B2C;Afiliado
+B-25701;B2C;Redes Sociales
+B-25702;B2C;Afiliado
+B-25703;B2C;Afiliado
+B-25704;B2C;Afiliado
+B-25705;B2C;Tienda Física
+B-25706;B2C;Tienda Física
+B-25707;B2C;Tienda Física
+B-25708;B2C;Tienda Física
+B-25709;B2C;Ecommerce
+B-25710;B2B;Ecommerce
+B-25711;B2B;Ecommerce
+B-25712;B2C;Ecommerce
+B-25713;B2B;Ecommerce
+B-25714;B2B;Ecommerce
+B-25715;B2B;Ecommerce
+B-25716;B2C;Ecommerce
+B-25717;B2B;Afiliado
+B-25718;B2B;Afiliado
+B-25719;B2B;Tienda Física
+B-25720;B2B;Tienda Física
+B-25721;B2B;Tienda Física
+B-25722;B2C;Tienda Física
+B-25723;B2B;Tienda Física
+B-25724;B2B;Afiliado
+B-25725;B2B;Tienda Física
+B-25726;B2C;Redes Sociales
+B-25727;B2B;Afiliado
+B-25728;B2B;Redes Sociales
+B-25729;B2B;Redes Sociales
+B-25730;B2B;Ecommerce
+B-25731;B2C;Ecommerce
+B-25732;B2C;Redes Sociales
+B-25733;B2C;Afiliado
+B-25734;B2C;Redes Sociales
+B-25735;B2C;Redes Sociales
+B-25736;B2C;Redes Sociales
+B-25737;B2C;Afiliado
+B-25738;B2C;Redes Sociales
+B-25739;B2C;Ecommerce
+B-25740;B2B;Afiliado
+B-25741;B2B;Ecommerce
+B-25742;B2B;Redes Sociales
+B-25743;B2B;Redes Sociales
+B-25744;B2B;Redes Sociales
+B-25745;B2B;Ecommerce
+B-25746;B2B;Ecommerce
+B-25747;B2B;Ecommerce
+B-25748;B2B;Redes Sociales
+B-25749;B2B;Afiliado
+B-25750;B2B;Afiliado
+B-25751;B2B;Afiliado
+B-25752;B2B;Afiliado
+B-25753;B2B;Afiliado
+B-25754;B2B;Ecommerce
+B-25755;B2B;Ecommerce
+B-25756;B2B;Ecommerce
+B-25757;B2B;Ecommerce
+B-25758;B2B;Ecommerce
+B-25759;B2B;Afiliado
+B-25760;B2B;Afiliado
+B-25761;B2B;Afiliado
+B-25762;B2B;Afiliado
+B-25763;B2B;Afiliado
+B-25764;B2B;Afiliado
+B-25765;B2C;Redes Sociales
+B-25766;B2B;Ecommerce
+B-25767;B2B;Redes Sociales
+B-25768;B2B;Redes Sociales
+B-25769;B2B;Ecommerce
+B-25770;B2B;Afiliado
+B-25771;B2B;Afiliado
+B-25772;B2B;Afiliado
+B-25773;B2B;Afiliado
+B-25774;B2B;Redes Sociales
+B-25775;B2B;Redes Sociales
+B-25776;B2B;Redes Sociales
+B-25777;B2B;Ecommerce
+B-25778;B2C;Redes Sociales
+B-25779;B2C;Redes Sociales
+B-25780;B2C;Ecommerce
+B-25781;B2C;Redes Sociales
+B-25782;B2C;Redes Sociales
+B-25783;B2C;Redes Sociales
+B-25784;B2C;Redes Sociales
+B-25785;B2C;Redes Sociales
+B-25786;B2C;Ecommerce
+B-25787;B2C;Redes Sociales
+B-25788;B2C;Redes Sociales
+B-25789;B2C;Ecommerce
+B-25790;B2C;Ecommerce
+B-25791;B2C;Ecommerce
+B-25792;B2C;Ecommerce
+B-25793;B2C;Tienda Física
+B-25794;B2C;Tienda Física
+B-25795;B2C;Ecommerce
+B-25796;B2C;Redes Sociales
+B-25797;B2C;Redes Sociales
+B-25798;B2C;Redes Sociales
+B-25799;B2C;Ecommerce
+B-25800;B2C;Tienda Física
+B-25801;B2C;Tienda Física
+B-25802;B2C;Afiliado
+B-25803;B2C;Afiliado
+B-25804;B2C;Ecommerce
+B-25805;B2C;Afiliado
+B-25806;B2C;Afiliado
+B-25807;B2B;Afiliado
+B-25808;B2B;Ecommerce
+B-25809;B2B;Afiliado
+B-25810;B2B;Afiliado
+B-25811;B2B;Afiliado
+B-25812;B2B;Afiliado
+B-25813;B2B;Afiliado
+B-25814;B2B;Afiliado
+B-25815;B2B;Ecommerce
+B-25816;B2C;Afiliado
+B-25817;B2C;Afiliado
+B-25818;B2C;Afiliado
+B-25819;B2C;Tienda Física
+B-25820;B2C;Tienda Física
+B-25821;B2C;Redes Sociales
+B-25822;B2C;Redes Sociales
+B-25823;B2C;Ecommerce
+B-25824;B2C;Redes Sociales
+B-25825;B2C;Redes Sociales
+B-25826;B2C;Redes Sociales
+B-25827;B2C;Ecommerce
+B-25828;B2C;Redes Sociales
+B-25829;B2C;Redes Sociales
+B-25830;B2C;Redes Sociales
+B-25831;B2C;Redes Sociales
+B-25832;B2C;Redes Sociales
+B-25833;B2C;Tienda Física
+B-25834;B2C;Tienda Física
+B-25835;B2B;Tienda Física
+B-25836;B2B;Tienda Física
+B-25837;B2C;Tienda Física
+B-25838;B2C;Afiliado
+B-25839;B2C;Afiliado
+B-25840;B2C;Afiliado
+B-25841;B2C;Afiliado
+B-25842;B2C;Ecommerce
+B-25843;B2C;Afiliado
+B-25844;B2C;Afiliado
+B-25845;B2C;Afiliado
+B-25846;B2B;Afiliado
+B-25847;B2B;Afiliado
+B-25848;B2B;Afiliado
+B-25849;B2B;Ecommerce
+B-25850;B2B;Ecommerce
+B-25851;B2B;Afiliado
+B-25852;B2B;Afiliado
+B-25853;B2B;Afiliado
+B-25854;B2B;Tienda Física
+B-25855;B2B;Tienda Física
+B-25856;B2B;Tienda Física
+B-25857;B2B;Redes Sociales
+B-25858;B2B;Redes Sociales
+B-25859;B2B;Ecommerce
+B-25860;B2C;Redes Sociales
+B-25861;B2C;Redes Sociales
+B-25862;B2C;Redes Sociales
+B-25863;B2C;Ecommerce
+B-25864;B2C;Redes Sociales
+B-25865;B2C;Redes Sociales
+B-25866;B2C;Redes Sociales
+B-25867;B2C;Ecommerce
+B-25868;B2C;Redes Sociales
+B-25869;B2C;Redes Sociales
+B-25870;B2C;Tienda Física
+B-25871;B2C;Tienda Física
+B-25872;B2C;Tienda Física
+B-25873;B2C;Tienda Física
+B-25874;B2C;Redes Sociales
+B-25875;B2C;Redes Sociales
+B-25876;B2C;Redes Sociales
+B-25877;B2C;Ecommerce
+B-25878;B2C;Redes Sociales
+B-25879;B2C;Redes Sociales
+B-25880;B2B;Redes Sociales
+B-25881;B2C;Redes Sociales
+B-25882;B2B;Redes Sociales
+B-25883;B2C;Tienda Física
+B-25884;B2B;Afiliado
+B-25885;B2C;Afiliado
+B-25886;B2C;Afiliado
+B-25887;B2B;Ecommerce
+B-25888;B2C;Afiliado
+B-25889;B2C;Afiliado
+B-25890;B2B;Afiliado
+B-25891;B2C;Ecommerce
+B-25892;B2C;Afiliado
+B-25893;B2C;Afiliado
+B-25894;B2B;Afiliado
+B-25895;B2B;Ecommerce
+B-25896;B2B;Afiliado
+B-25897;B2B;Afiliado
+B-25898;B2B;Afiliado
+B-25899;B2B;Afiliado
+B-25900;B2B;Afiliado
+B-25901;B2B;Tienda Física
+B-25902;B2B;Redes Sociales
+B-25903;B2B;Redes Sociales
+B-25904;B2B;Redes Sociales
+B-25905;B2C;Ecommerce
+B-25906;B2C;Redes Sociales
+B-25907;B2C;Ecommerce
+B-25908;B2C;Redes Sociales
+B-25909;B2C;Redes Sociales
+B-25910;B2C;Redes Sociales
+B-25911;B2C;Ecommerce
+B-25912;B2C;Redes Sociales
+B-25913;B2C;Redes Sociales
+B-25914;B2C;Redes Sociales
+B-25915;B2C;Redes Sociales
+B-25916;B2C;Tienda Física
+B-25917;B2C;Tienda Física
+B-25918;B2C;Tienda Física
+B-25919;B2C;Tienda Física
+B-25920;B2C;Tienda Física
+B-25921;B2C;Tienda Física
+B-25922;B2C;Redes Sociales
+B-25923;B2C;Redes Sociales
+B-25924;B2C;Redes Sociales
+B-25925;B2B;Redes Sociales
+B-25926;B2B;Redes Sociales
+B-25927;B2C;Tienda Física
+B-25928;B2B;Tienda Física
+B-25929;B2C;Tienda Física
+B-25930;B2B;Afiliado
+B-25931;B2B;Afiliado
+B-25932;B2B;Afiliado
+B-25933;B2B;Ecommerce
+B-25934;B2B;Afiliado
+B-25935;B2B;Afiliado
+B-25936;B2C;Afiliado
+B-25937;B2B;Afiliado
+B-25938;B2B;Ecommerce
+B-25939;B2B;Afiliado
+B-25940;B2B;Afiliado
+B-25941;B2B;Afiliado
+B-25942;B2B;Tienda Física
+B-25943;B2B;Redes Sociales
+B-25944;B2C;Redes Sociales
+B-25945;B2C;Redes Sociales
+B-25946;B2C;Redes Sociales
+B-25947;B2C;Redes Sociales
+B-25948;B2B;Redes Sociales
+B-25949;B2B;Redes Sociales
+B-25950;B2B;Redes Sociales
+B-25951;B2B;Afiliado
+B-25952;B2C;Afiliado
+B-25953;B2C;Afiliado
+B-25954;B2C;Afiliado
+B-25955;B2B;Afiliado
+B-25956;B2C;Afiliado
+B-25957;B2C;Afiliado
+B-25958;B2C;Tienda Física
+B-25959;B2B;Tienda Física
+B-25960;B2C;Tienda Física
+B-25961;B2C;Tienda Física
+B-25962;B2C;Tienda Física
+B-25963;B2C;Ecommerce
+B-25964;B2C;Redes Sociales
+B-25965;B2C;Redes Sociales
+B-25966;B2B;Redes Sociales
+B-25967;B2B;Redes Sociales
+B-25968;B2B;Redes Sociales
+B-25969;B2B;Ecommerce
+B-25970;B2B;Redes Sociales
+B-25971;B2B;Redes Sociales
+B-25972;B2B;Redes Sociales
+B-25973;B2B;Ecommerce
+B-25974;B2C;Redes Sociales
+B-25975;B2B;Redes Sociales
+B-25976;B2B;Redes Sociales
+B-25977;B2B;Redes Sociales
+B-25978;B2B;Redes Sociales
+B-25979;B2C;Ecommerce
+B-25980;B2B;Ecommerce
+B-25981;B2C;Ecommerce
+B-25982;B2B;Afiliado
+B-25983;B2B;Afiliado
+B-25984;B2B;Afiliado
+B-25985;B2B;Afiliado
+B-25986;B2C;Afiliado
+B-25987;B2B;Afiliado
+B-25988;B2B;Afiliado
+B-25989;B2C;Afiliado
+B-25990;B2B;Afiliado
+B-25991;B2B;Ecommerce
+B-25992;B2C;Ecommerce
+B-25993;B2B;Ecommerce
+B-25994;B2C;Ecommerce
+B-25995;B2B;Redes Sociales
+B-25996;B2B;Redes Sociales
+B-25997;B2B;Ecommerce
+B-25998;B2B;Redes Sociales
+B-25999;B2B;Redes Sociales
+B-26000;B2B;Redes Sociales
+B-26001;B2C;Redes Sociales
+B-26002;B2B;Ecommerce
+B-26003;B2B;Redes Sociales
+B-26004;B2B;Redes Sociales
+B-26005;B2B;Redes Sociales
+B-26006;B2B;Ecommerce
+B-26007;B2B;Ecommerce
+B-26008;B2B;Afiliado
+B-26009;B2B;Afiliado
+B-26010;B2B;Afiliado
+B-26011;B2C;Afiliado
+B-26012;B2B;Afiliado
+B-26013;B2B;Afiliado
+B-26014;B2B;Afiliado
+B-26015;B2B;Afiliado
+B-26016;B2B;Ecommerce
+B-26017;B2B;Redes Sociales
+B-26018;B2C;Redes Sociales
+B-26019;B2B;Redes Sociales
+B-26020;B2B;Redes Sociales
+B-26021;B2B;Ecommerce
+B-26022;B2B;Redes Sociales
+B-26023;B2B;Redes Sociales
+B-26024;B2B;Redes Sociales
+B-26025;B2C;Redes Sociales
+B-26026;B2B;Redes Sociales
+B-26027;B2B;Ecommerce
+B-26028;B2B;Ecommerce
+B-26029;B2B;Afiliado
+B-26030;B2B;Afiliado
+B-26031;B2B;Afiliado
+B-26032;B2B;Afiliado
+B-26033;B2B;Afiliado
+B-26034;B2B;Afiliado
+B-26035;B2B;Ecommerce
+B-26036;B2B;Ecommerce
+B-26037;B2B;Ecommerce
+B-26038;B2B;Redes Sociales
+B-26039;B2B;Redes Sociales
+B-26040;B2B;Redes Sociales
+B-26041;B2B;Redes Sociales
+B-26042;B2B;Redes Sociales
+B-26043;B2B;Ecommerce
+B-26044;B2B;Redes Sociales
+B-26045;B2B;Redes Sociales
+B-26046;B2B;Redes Sociales
+B-26047;B2B;Redes Sociales
+B-26048;B2B;Ecommerce
+B-26049;B2B;Afiliado
+B-26050;B2B;Afiliado
+B-26051;B2C;Afiliado
+B-26052;B2B;Afiliado
+B-26053;B2B;Ecommerce
+B-26054;B2B;Afiliado
+B-26055;B2B;Afiliado
+B-26056;B2C;Afiliado
+B-26057;B2B;Afiliado
+B-26058;B2B;Ecommerce
+B-26059;B2B;Ecommerce
+B-26060;B2B;Ecommerce
+B-26061;B2B;Redes Sociales
+B-26062;B2B;Redes Sociales
+B-26063;B2B;Redes Sociales
+B-26064;B2B;Redes Sociales
+B-26065;B2B;Ecommerce
+B-26066;B2B;Afiliado
+B-26067;B2B;Ecommerce
+B-26068;B2B;Afiliado
+B-26069;B2C;Afiliado
+B-26070;B2C;Afiliado
+B-26071;B2C;Ecommerce
+B-26072;B2C;Afiliado
+B-26073;B2C;Afiliado
+B-26074;B2C;Afiliado
+B-26075;B2C;Afiliado
+B-26076;B2B;Afiliado
+B-26077;B2B;Afiliado
+B-26078;B2B;Ecommerce
+B-26079;B2B;Redes Sociales
+B-26080;B2B;Redes Sociales
+B-26081;B2B;Redes Sociales
+B-26082;B2B;Ecommerce
+B-26083;B2B;Redes Sociales
+B-26084;B2B;Redes Sociales
+B-26085;B2B;Redes Sociales
+B-26086;B2B;Afiliado
+B-26087;B2B;Afiliado
+B-26088;B2B;Afiliado
+B-26089;B2B;Afiliado
+B-26090;B2C;Ecommerce
+B-26091;B2C;Afiliado
+B-26092;B2C;Afiliado
+B-26093;B2C;Afiliado
+B-26094;B2C;Afiliado
+B-26095;B2C;Afiliado
+B-26096;B2C;Afiliado
+B-26097;B2C;Ecommerce
+B-26098;B2C;Ecommerce
+B-26099;B2C;Ecommerce
+B-26100;B2C;Ecommerce

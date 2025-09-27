@@ -1,0 +1,30 @@
+
+## Programacion 
+# Python es un Lenguaje de alto nivel
+# Es un Lenguaje (Es un set de reglas)
+
+## Implementaciones de Programacion dependiendo el Lenguaje a utlizar. (Se importar las librerias)
+# - cpython = C  (Esta aborda todas las nuevas Implementaciones de python)
+# - PyPy = 
+# - Jython = Java
+# - IronPython = C#
+# - Brython = Explorador Web
+
+## Como funciona el Codigo ejemplo paso a paso
+
+## Ejemplo Java
+# 1.1 Java
+# 1.2 compilador
+# 1.3 ByteCode
+# 1.4 JVM
+# 1.5 Java virtual Machine
+# 1.6 lenguaje maquina
+
+
+## Ejemplo Python
+# 1.1 Python
+# 1.2 compilador
+# 1.3 ByteCode
+# 1.4 PVM
+# 1.5 python virtual Machine
+# 1.6 lenguaje maquina

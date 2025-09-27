@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35229.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Mineria Datos", "Mineria Datos\Mineria Datos.dwproj", "{03C53116-9972-4E86-BE0F-533FFF71BEA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03C53116-9972-4E86-BE0F-533FFF71BEA1}.Development|Default.ActiveCfg = Development
+		{03C53116-9972-4E86-BE0F-533FFF71BEA1}.Development|Default.Build.0 = Development
+		{03C53116-9972-4E86-BE0F-533FFF71BEA1}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F7E1687-DA61-465B-B64F-0580588C50C5}
+	EndGlobalSection
+EndGlobal

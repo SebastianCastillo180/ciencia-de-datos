@@ -1,0 +1,174 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c7303bcb-058f-4feb-ae88-7c53c8dc23fc" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Cartera Edades</ID>
+  <Name>Cartera Edades</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Mineria</DataSourceID>
+  <Schema>
+    <xs:schema id="Cartera_x0020_Edades" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Cartera_x0020_Edades" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="a60edf9c-9ae5-4bf1-9af6-90c0865c5844">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_CARTERA_CLIENTE_EDADES" msprop:design-time-name="b1220e7b-3c3e-4b57-9fce-65ff7fd570e4" msprop:DbTableName="CARTERA_CLIENTE_EDADES" msprop:FriendlyName="CARTERA_CLIENTE_EDADES" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="f1_tercero_razon_social" msprop:design-time-name="f9f45d70-ae6b-4144-9bc4-7dccc50739ac" msprop:DbColumnName="f1_tercero_razon_social" msprop:FriendlyName="f1_tercero_razon_social" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="250" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="f1_co" msprop:design-time-name="f14112b7-bd90-4fe1-8860-994f8d61edf3" msprop:DbColumnName="f1_co" msprop:FriendlyName="f1_co" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="f1_nit" msprop:design-time-name="626d4632-5edb-4a0e-b245-c610cee89d31" msprop:DbColumnName="f1_nit" msprop:FriendlyName="f1_nit" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="f1_docto_cruce" msprop:design-time-name="2ad762ca-1d9d-4d20-93c6-94402d15bab6" msprop:DbColumnName="f1_docto_cruce" msprop:FriendlyName="f1_docto_cruce" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="f_fecha_docto_cruce" msprop:design-time-name="c8b9da6c-ec34-4d6f-a65f-4ba0e7e0a479" msprop:DbColumnName="f_fecha_docto_cruce" msprop:FriendlyName="f_fecha_docto_cruce" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="f1_fecha_vcto" msprop:design-time-name="aad43ff6-01d4-4614-a927-810c91b59c7f" msprop:DbColumnName="f1_fecha_vcto" msprop:FriendlyName="f1_fecha_vcto" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="f1_dias_vencido" msprop:design-time-name="55393458-fea0-432d-8b92-64a81958e2ca" msprop:DbColumnName="f1_dias_vencido" msprop:FriendlyName="f1_dias_vencido" type="xs:int" minOccurs="0" />
+                  <xs:element name="f1_saldo_vencido_total" msprop:design-time-name="f6a6613e-0651-4fce-8c55-e614a609f435" msprop:DbColumnName="f1_saldo_vencido_total" msprop:FriendlyName="f1_saldo_vencido_total" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="f1_saldo_corriente_total" msprop:design-time-name="6c55f067-abb5-41fe-b096-49cd61f420f4" msprop:DbColumnName="f1_saldo_corriente_total" msprop:FriendlyName="f1_saldo_corriente_total" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="f1_saldo_total" msprop:design-time-name="7df57800-e3ab-4dc9-a829-f6b89248839a" msprop:DbColumnName="f1_saldo_total" msprop:FriendlyName="f1_saldo_total" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="f1_notas" msprop:design-time-name="02ce23a1-dcb7-4b4a-9bb8-3a164b950cfd" msprop:DbColumnName="f1_notas" msprop:FriendlyName="f1_notas" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="300" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="f_bloqueado" msprop:design-time-name="03317c07-7702-4be7-a342-162a826e3505" msprop:DbColumnName="f_bloqueado" msprop:FriendlyName="f_bloqueado" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="f1_bloqueado_cupo" msprop:design-time-name="8d4c87a8-6512-4ec9-8789-9440a8f76724" msprop:DbColumnName="f1_bloqueado_cupo" msprop:FriendlyName="f1_bloqueado_cupo" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="f1_bloqueado_mora" msprop:design-time-name="f4c61ca1-fcf7-43c6-b881-72acf3859232" msprop:DbColumnName="f1_bloqueado_mora" msprop:FriendlyName="f1_bloqueado_mora" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="f1_desc_cond_pago" msprop:design-time-name="8e60ffed-120e-4798-a1a8-186b79b1a906" msprop:DbColumnName="f1_desc_cond_pago" msprop:FriendlyName="f1_desc_cond_pago" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="f_desc_cond_pago_fact" msprop:design-time-name="424ab509-bf78-4f54-9c1f-ec4ea2c32f66" msprop:DbColumnName="f_desc_cond_pago_fact" msprop:FriendlyName="f_desc_cond_pago_fact" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="f1_cupo" msprop:design-time-name="c0564e3a-1f68-488d-b53e-c43258c6fe81" msprop:DbColumnName="f1_cupo" msprop:FriendlyName="f1_cupo" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="f_02_004" msprop:design-time-name="dee1f751-cf67-4284-9553-9930a0ddc3ac" msprop:DbColumnName="f_02_004" msprop:FriendlyName="f_02_004" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="f_02_003" msprop:design-time-name="95d51d73-8674-4e5c-9906-8f50abb0a860" msprop:DbColumnName="f_02_003" msprop:FriendlyName="f_02_003" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="fecha_corte" msprop:design-time-name="b8cd08d2-812b-49ca-86f6-5ebf6e8fc638" msprop:DbColumnName="fecha_corte" msprop:FriendlyName="fecha_corte" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <Cartera_x0020_Edades xmlns="" />
+  </Schema>
+</DataSourceView>

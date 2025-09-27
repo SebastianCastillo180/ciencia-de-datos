@@ -1,0 +1,85 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0fe33bf1-d361-4035-8e7d-786fa8bbd01d" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Data Stage</ID>
+  <Name>CloudFleet</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Mineria</DataSourceID>
+  <Schema>
+    <xs:schema id="Data_x0020_Stage" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Data_x0020_Stage" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="e8f8a1b4-c4f1-4b91-ae35-cc6b04cc182d">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo__x000D__x000A_Tb_CloudFleet_004_City" msprop:design-time-name="3f4048a3-a451-4aa7-be04-5fe120658f7e" msprop:FriendlyName="&#xD;&#xA;Tb_CloudFleet_004_City" msprop:DbSchemaName="dbo" msprop:DbTableName="&#xD;&#xA;Tb_CloudFleet_004_City" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msprop:design-time-name="97a7adeb-cdc6-4256-9851-75b7e097c6ff" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" minOccurs="0" />
+                  <xs:element name="idProvenencia" msprop:design-time-name="13588977-d755-43b8-b334-3ed2fab87a61" msprop:DbColumnName="idProvenencia" msprop:FriendlyName="idProvenencia" type="xs:int" minOccurs="0" />
+                  <xs:element name="idVehiculo" msprop:design-time-name="7568a040-304c-4607-a4dc-1275c77cdee9" msprop:DbColumnName="idVehiculo" msprop:FriendlyName="idVehiculo" type="xs:int" minOccurs="0" />
+                  <xs:element name="idOrdenes" msprop:design-time-name="a86dc835-6438-4022-a05c-122486f4cf19" msprop:DbColumnName="idOrdenes" msprop:FriendlyName="idOrdenes" type="xs:int" minOccurs="0" />
+                  <xs:element name="idChecklist" msprop:design-time-name="4bb05050-5bf3-406c-8836-ac4f01630d3c" msprop:DbColumnName="idChecklist" msprop:FriendlyName="idChecklist" type="xs:int" minOccurs="0" />
+                  <xs:element name="idCity" msprop:design-time-name="03af98ac-c049-4294-b848-c8b0600601d5" msprop:DbColumnName="idCity" msprop:FriendlyName="idCity" type="xs:int" minOccurs="0" />
+                  <xs:element name="name" msprop:design-time-name="a9ff6397-fe87-433c-8f1f-60e48e15f6b4" msprop:DbColumnName="name" msprop:FriendlyName="name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="code" msprop:design-time-name="516de625-1be3-46ab-9a93-1007b742c9de" msprop:DbColumnName="code" msprop:FriendlyName="code" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FechaEjecucion" msprop:design-time-name="037227f3-1de6-4ce2-a870-c7900b3a977e" msprop:DbColumnName="FechaEjecucion" msprop:FriendlyName="FechaEjecucion" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <Data_x0020_Stage xmlns="" />
+  </Schema>
+</DataSourceView>

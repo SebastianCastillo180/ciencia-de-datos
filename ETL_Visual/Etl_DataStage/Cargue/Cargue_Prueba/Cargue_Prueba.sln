@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Cargue_Prueba", "Cargue_Prueba.dtproj", "{CB6A0B5A-2910-4898-A133-CD182E00649C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB6A0B5A-2910-4898-A133-CD182E00649C}.Development|Default.ActiveCfg = Development
+		{CB6A0B5A-2910-4898-A133-CD182E00649C}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5CB737AD-F4C6-4650-96E2-BD4315DD8860}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1458 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/23/2025 8:22:49 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="JCASTILLO-1"
+  DTS:CreatorName="RAYOGAS\analistabi"
+  DTS:DTSID="{BB939A8A-6959-4BD8-8CBD-09F66E71F4BA}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
+  DTS:LocaleID="9226"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{A363470A-9631-42CA-81E4-642F96317081}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Presupuesto]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{F6C4B7B0-7FF7-464B-B9B5-A8CFD1791F96}"
+      DTS:ObjectName="Presupuesto">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=D:\OneDrive - Rayogas\Ventas Rayo y Alma\Maestros BI\Formato presupuesto - KLS.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SVRV-BD2.DataStage]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C040D63D-4DDF-456C-91E0-071F4F847A01}"
+      DTS:ObjectName="SVRV-BD2.DataStage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=SVRV-BD2;Initial Catalog=DataStage;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{C040D63D-4DDF-456C-91E0-071F4F847A01}SVRV-BD2.DataStage;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT_Comercial"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{DF33EDE9-1FA8-4AEA-BB83-8F6119F65F91}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_Comercial"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_Comercial\Excel_PttoZona"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel_PttoZona"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Hoja1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Comercial\Excel_PttoZona.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Presupuesto]"
+                  connectionManagerRefId="Package.ConnectionManagers[Presupuesto]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Dia]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Dia]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Dia]"
+                      name="Dia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Zona]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Zona]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Zona]"
+                      name="Zona"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Ppto en Kilos]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Ppto en Kilos]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Ppto en Kilos]"
+                      name="Ppto en Kilos"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[C#O]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[C#O]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[C#O]"
+                      name="C#O"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Mes]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Mes]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Mes]"
+                      name="Mes"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Año]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Año]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Año]"
+                      name="Año"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[U#N]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[U#N]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[U#N]"
+                      name="U#N"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Canal]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Canal]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Canal]"
+                      name="Canal"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Subcentro]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Subcentro]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Subcentro]"
+                      name="Subcentro"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Cod Sucursal]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Cod Sucursal]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Cod Sucursal]"
+                      name="Cod Sucursal"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[EQUIPO COMERCIAL]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[EQUIPO COMERCIAL]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[EQUIPO COMERCIAL]"
+                      name="EQUIPO COMERCIAL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Cod# Vendedor]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Cod# Vendedor]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Cod# Vendedor]"
+                      name="Cod# Vendedor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Meta Margen]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Meta Margen]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Meta Margen]"
+                      name="Meta Margen"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Márgen Millones]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Márgen Millones]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Márgen Millones]"
+                      name="Márgen Millones"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[V1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[V1]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[V1]"
+                      name="V1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[V2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[V2]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[V2]"
+                      name="V2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Presupuesto Kilos]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Presupuesto Kilos]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Presupuesto Kilos]"
+                      name="Presupuesto Kilos"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Ventas reales]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Ventas reales]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Ventas reales]"
+                      name="Ventas reales"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F19]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F19]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F19]"
+                      name="F19"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F20]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F20]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F20]"
+                      name="F20"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F21]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F21]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F21]"
+                      name="F21"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[ppto margen]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[ppto margen]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[ppto margen]"
+                      name="ppto margen"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Real margen ]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Real margen ]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Real margen ]"
+                      name="Real margen "
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F24]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F24]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F24]"
+                      name="F24"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F25]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F25]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F25]"
+                      name="F25"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F26]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F26]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F26]"
+                      name="F26"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F27]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F27]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F27]"
+                      name="F27"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F28]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F28]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F28]"
+                      name="F28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F29]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F29]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F29]"
+                      name="F29"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F30]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F30]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F30]"
+                      name="F30"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F31]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F31]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F31]"
+                      name="F31"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[0]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[0]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[0]"
+                      name="0"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[01]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[01]"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[01]"
+                      name="01"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Dia]"
+                      dataType="date"
+                      name="Dia" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Zona]"
+                      dataType="wstr"
+                      length="255"
+                      name="Zona" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Ppto en Kilos]"
+                      dataType="r8"
+                      name="Ppto en Kilos" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[C#O]"
+                      dataType="wstr"
+                      length="255"
+                      name="C#O" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Mes]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mes" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Año]"
+                      dataType="r8"
+                      name="Año" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[U#N]"
+                      dataType="wstr"
+                      length="255"
+                      name="U#N" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Canal]"
+                      dataType="wstr"
+                      length="255"
+                      name="Canal" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Subcentro]"
+                      dataType="wstr"
+                      length="255"
+                      name="Subcentro" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Cod Sucursal]"
+                      dataType="wstr"
+                      length="255"
+                      name="Cod Sucursal" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[EQUIPO COMERCIAL]"
+                      dataType="r8"
+                      name="EQUIPO COMERCIAL" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Cod# Vendedor]"
+                      dataType="r8"
+                      name="Cod# Vendedor" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Meta Margen]"
+                      dataType="r8"
+                      name="Meta Margen" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Márgen Millones]"
+                      dataType="cy"
+                      name="Márgen Millones" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[V1]"
+                      dataType="wstr"
+                      length="255"
+                      name="V1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[V2]"
+                      dataType="wstr"
+                      length="255"
+                      name="V2" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Presupuesto Kilos]"
+                      dataType="wstr"
+                      length="255"
+                      name="Presupuesto Kilos" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Ventas reales]"
+                      dataType="wstr"
+                      length="255"
+                      name="Ventas reales" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F19]"
+                      dataType="wstr"
+                      length="255"
+                      name="F19" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F20]"
+                      dataType="wstr"
+                      length="255"
+                      name="F20" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F21]"
+                      dataType="wstr"
+                      length="255"
+                      name="F21" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[ppto margen]"
+                      dataType="wstr"
+                      length="255"
+                      name="ppto margen" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[Real margen ]"
+                      dataType="wstr"
+                      length="255"
+                      name="Real margen " />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F24]"
+                      dataType="wstr"
+                      length="255"
+                      name="F24" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F25]"
+                      dataType="wstr"
+                      length="255"
+                      name="F25" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F26]"
+                      dataType="wstr"
+                      length="255"
+                      name="F26" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F27]"
+                      dataType="wstr"
+                      length="255"
+                      name="F27" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F28]"
+                      dataType="wstr"
+                      length="255"
+                      name="F28" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F29]"
+                      dataType="wstr"
+                      length="255"
+                      name="F29" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F30]"
+                      dataType="wstr"
+                      length="255"
+                      name="F30" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[F31]"
+                      dataType="wstr"
+                      length="255"
+                      name="F31" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[0]"
+                      dataType="wstr"
+                      length="255"
+                      name="0" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].ExternalColumns[01]"
+                      dataType="wstr"
+                      length="255"
+                      name="01" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Dia]"
+                      dataType="date"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Dia]"
+                      name="Dia" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Zona]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Zona]"
+                      name="Zona" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Ppto en Kilos]"
+                      dataType="r8"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Ppto en Kilos]"
+                      name="Ppto en Kilos" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[C#O]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[C#O]"
+                      name="C#O" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Mes]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Mes]"
+                      name="Mes" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Año]"
+                      dataType="r8"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Año]"
+                      name="Año" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[U#N]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[U#N]"
+                      name="U#N" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Canal]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Canal]"
+                      name="Canal" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Subcentro]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Subcentro]"
+                      name="Subcentro" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Cod Sucursal]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Cod Sucursal]"
+                      name="Cod Sucursal" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[EQUIPO COMERCIAL]"
+                      dataType="r8"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[EQUIPO COMERCIAL]"
+                      name="EQUIPO COMERCIAL" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Cod# Vendedor]"
+                      dataType="r8"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Cod# Vendedor]"
+                      name="Cod# Vendedor" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Meta Margen]"
+                      dataType="r8"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Meta Margen]"
+                      name="Meta Margen" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Márgen Millones]"
+                      dataType="cy"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Márgen Millones]"
+                      name="Márgen Millones" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[V1]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[V1]"
+                      name="V1" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[V2]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[V2]"
+                      name="V2" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Presupuesto Kilos]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Presupuesto Kilos]"
+                      name="Presupuesto Kilos" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Ventas reales]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Ventas reales]"
+                      name="Ventas reales" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F19]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F19]"
+                      name="F19" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F20]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F20]"
+                      name="F20" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F21]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F21]"
+                      name="F21" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[ppto margen]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[ppto margen]"
+                      name="ppto margen" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Real margen ]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[Real margen ]"
+                      name="Real margen " />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F24]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F24]"
+                      name="F24" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F25]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F25]"
+                      name="F25" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F26]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F26]"
+                      name="F26" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F27]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F27]"
+                      name="F27" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F28]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F28]"
+                      name="F28" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F29]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F29]"
+                      name="F29" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F30]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F30]"
+                      name="F30" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F31]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[F31]"
+                      name="F31" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[0]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[0]"
+                      name="0" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[01]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[01]"
+                      name="01" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Comercial\OLEDB_PttoZona"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLEDB_PttoZona"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[xls].[Prueba_Ptto_Zona]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Comercial\OLEDB_PttoZona.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SVRV-BD2.DataStage]"
+                  connectionManagerRefId="Package.ConnectionManagers[SVRV-BD2.DataStage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[Dia]"
+                      cachedDataType="date"
+                      cachedName="Dia"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Dia]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Dia]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[Zona]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Zona"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Zona]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Zona]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[Ppto en Kilos]"
+                      cachedDataType="r8"
+                      cachedName="Ppto en Kilos"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Ppto en Kilos]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Ppto en Kilos]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[C#O]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="C#O"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[C#O]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[C#O]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[Mes]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Mes"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Mes]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Mes]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[Año]"
+                      cachedDataType="r8"
+                      cachedName="Año"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Año]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Año]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[U#N]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="U#N"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[U#N]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[U#N]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[Canal]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Canal"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Canal]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Canal]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[Subcentro]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Subcentro"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Subcentro]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Subcentro]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[Cod Sucursal]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Cod Sucursal"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Cod Sucursal]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Cod Sucursal]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[EQUIPO COMERCIAL]"
+                      cachedDataType="r8"
+                      cachedName="EQUIPO COMERCIAL"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[EQUIPO COMERCIAL]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[EQUIPO COMERCIAL]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[Cod# Vendedor]"
+                      cachedDataType="r8"
+                      cachedName="Cod# Vendedor"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Cod# Vendedor]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Cod# Vendedor]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[Meta Margen]"
+                      cachedDataType="r8"
+                      cachedName="Meta Margen"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Meta Margen]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Meta Margen]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[Márgen Millones]"
+                      cachedDataType="cy"
+                      cachedName="Márgen Millones"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Márgen Millones]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Márgen Millones]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[V1]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="V1"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[V1]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[V1]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[V2]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="V2"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[V2]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[V2]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[Presupuesto Kilos]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Presupuesto Kilos"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Presupuesto Kilos]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Presupuesto Kilos]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[Ventas reales]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Ventas reales"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Ventas reales]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Ventas reales]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[F19]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="F19"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F19]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F19]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[F20]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="F20"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F20]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F20]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[F21]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="F21"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F21]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F21]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[ppto margen]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ppto margen"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[ppto margen]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[ppto margen]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[Real margen ]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Real margen "
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Real margen ]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[Real margen ]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[F24]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="F24"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F24]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F24]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[F25]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="F25"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F25]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F25]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[F26]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="F26"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F26]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F26]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[F27]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="F27"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F27]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F27]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[F28]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="F28"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F28]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F28]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[F29]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="F29"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F29]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F29]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[F30]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="F30"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F30]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F30]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[F31]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="F31"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F31]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[F31]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[0]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="0"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[0]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[0]" />
+                    <inputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].Columns[01]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="01"
+                      externalMetadataColumnId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[01]"
+                      lineageId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output].Columns[01]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Dia]"
+                      dataType="dbTimeStamp"
+                      name="Dia" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Zona]"
+                      dataType="wstr"
+                      length="255"
+                      name="Zona" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Ppto en Kilos]"
+                      dataType="r8"
+                      name="Ppto en Kilos" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[C#O]"
+                      dataType="wstr"
+                      length="255"
+                      name="C#O" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Mes]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mes" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Año]"
+                      dataType="r8"
+                      name="Año" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[U#N]"
+                      dataType="wstr"
+                      length="255"
+                      name="U#N" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Canal]"
+                      dataType="wstr"
+                      length="255"
+                      name="Canal" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Subcentro]"
+                      dataType="wstr"
+                      length="255"
+                      name="Subcentro" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Cod Sucursal]"
+                      dataType="wstr"
+                      length="255"
+                      name="Cod Sucursal" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[EQUIPO COMERCIAL]"
+                      dataType="r8"
+                      name="EQUIPO COMERCIAL" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Cod# Vendedor]"
+                      dataType="r8"
+                      name="Cod# Vendedor" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Meta Margen]"
+                      dataType="r8"
+                      name="Meta Margen" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Márgen Millones]"
+                      dataType="cy"
+                      name="Márgen Millones" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[V1]"
+                      dataType="wstr"
+                      length="255"
+                      name="V1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[V2]"
+                      dataType="wstr"
+                      length="255"
+                      name="V2" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Presupuesto Kilos]"
+                      dataType="wstr"
+                      length="255"
+                      name="Presupuesto Kilos" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Ventas reales]"
+                      dataType="wstr"
+                      length="255"
+                      name="Ventas reales" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F19]"
+                      dataType="wstr"
+                      length="255"
+                      name="F19" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F20]"
+                      dataType="wstr"
+                      length="255"
+                      name="F20" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F21]"
+                      dataType="wstr"
+                      length="255"
+                      name="F21" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[ppto margen]"
+                      dataType="wstr"
+                      length="255"
+                      name="ppto margen" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[Real margen ]"
+                      dataType="wstr"
+                      length="255"
+                      name="Real margen " />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F24]"
+                      dataType="wstr"
+                      length="255"
+                      name="F24" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F25]"
+                      dataType="wstr"
+                      length="255"
+                      name="F25" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F26]"
+                      dataType="wstr"
+                      length="255"
+                      name="F26" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F27]"
+                      dataType="wstr"
+                      length="255"
+                      name="F27" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F28]"
+                      dataType="wstr"
+                      length="255"
+                      name="F28" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F29]"
+                      dataType="wstr"
+                      length="255"
+                      name="F29" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F30]"
+                      dataType="wstr"
+                      length="255"
+                      name="F30" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[F31]"
+                      dataType="wstr"
+                      length="255"
+                      name="F31" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[0]"
+                      dataType="wstr"
+                      length="255"
+                      name="0" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input].ExternalColumns[01]"
+                      dataType="wstr"
+                      length="255"
+                      name="01" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Comercial\OLEDB_PttoZona.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Comercial\OLEDB_PttoZona.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Comercial\OLEDB_PttoZona.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Comercial\OLEDB_PttoZona.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_Comercial.Paths[Excel Source Output]"
+              endId="Package\DFT_Comercial\OLEDB_PttoZona.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\DFT_Comercial\Excel_PttoZona.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{71525B6A-0A42-427F-AE07-D073BD7D7EC4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C040D63D-4DDF-456C-91E0-071F4F847A01}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [xls].[Prueba_Ptto_Zona]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{8A60A5B0-26B0-4E79-A4A8-81B3C05086C4}"
+      DTS:From="Package\Tarea Ejecutar SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\DFT_Comercial" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150.666666666667,42.6666666666667"
+          Id="Package\DFT_Comercial"
+          TopLeft="186.874991646037,144.29999311924" />
+        <NodeLayout
+          Size="170.666666666667,42.6666666666667"
+          Id="Package\Tarea Ejecutar SQL"
+          TopLeft="44.374998016283,58.4999972105027" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="129.708331349616,101.166663877169">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="132.499993629754,43.1333292420707"
+              Start="0,0"
+              End="132.499993629754,35.6333292420707">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5666646210353" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.5666646210353"
+                    Point2="0,21.5666646210353"
+                    Point3="4,21.5666646210353" />
+                  <mssgle:LineSegment
+                    End="128.499993629754,21.5666646210353" />
+                  <mssgle:CubicBezierSegment
+                    Point1="128.499993629754,21.5666646210353"
+                    Point2="132.499993629754,21.5666646210353"
+                    Point3="132.499993629754,25.5666646210353" />
+                  <mssgle:LineSegment
+                    End="132.499993629754,35.6333292420707" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT_Comercial">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,42.6666666666667"
+          Id="Package\DFT_Comercial\Excel_PttoZona"
+          TopLeft="159.374992875383,27.2999986982346" />
+        <NodeLayout
+          Size="160,42.6666666666667"
+          Id="Package\DFT_Comercial\OLEDB_PttoZona"
+          TopLeft="151.874993210659,137.799993429184" />
+        <EdgeLayout
+          Id="Package\DFT_Comercial.Paths[Excel Source Output]"
+          TopLeft="233.624993043021,69.9666653649012">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,67.8333280642829"
+              Start="0,0"
+              End="0,60.3333280642829">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.3333280642829" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Comercial\Excel_PttoZona">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Comercial\OLEDB_PttoZona">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
