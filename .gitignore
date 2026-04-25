@@ -19,3 +19,6 @@ __pycache__/
 # Archivos de sistema
 .DS_Store
 Thumbs.db
+
+# Scripts con credenciales de APIs
+Ciencia_Datos/ConexionesApi/
