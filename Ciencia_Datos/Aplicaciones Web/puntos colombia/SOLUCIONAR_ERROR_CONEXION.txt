@@ -1,0 +1,163 @@
+═══════════════════════════════════════════════════════════════
+  SOLUCIONAR ERROR DE CONEXIÓN A SQL SERVER
+  Error: Named Pipes Provider / Login timeout expired
+═══════════════════════════════════════════════════════════════
+
+El error que está viendo indica que Python no puede conectarse al
+servidor SQL Server en 192.155.0.11
+
+PASO 1: VERIFICAR CONECTIVIDAD DE RED
+═══════════════════════════════════════════════════════════════
+
+1. Abrir CMD (Símbolo del sistema)
+
+2. Hacer ping al servidor:
+   > ping 192.155.0.11
+
+   ¿Responde?
+   ✓ SI  → Continuar al Paso 2
+   ✗ NO  → Problema de red. Verificar:
+           - ¿La IP es correcta?
+           - ¿Está conectado a la misma red?
+           - ¿Hay firewall bloqueando?
+
+PASO 2: VERIFICAR PUERTO SQL SERVER
+═══════════════════════════════════════════════════════════════
+
+1. Probar conexión al puerto 1433:
+   > telnet 192.155.0.11 1433
+
+   Si no tiene telnet, instalarlo:
+   > dism /online /Enable-Feature /FeatureName:TelnetClient
+
+   ¿Se conecta?
+   ✓ SI  → SQL Server está escuchando, continuar al Paso 3
+   ✗ NO  → El puerto está bloqueado. Verificar:
+           - Firewall del servidor SQL
+           - Firewall de Windows
+           - SQL Server Configuration Manager
+
+PASO 3: CONFIGURAR SQL SERVER PARA CONEXIONES REMOTAS
+═══════════════════════════════════════════════════════════════
+
+EN EL SERVIDOR SQL SERVER (192.155.0.11):
+
+1. Abrir "SQL Server Configuration Manager"
+
+2. Ir a: SQL Server Network Configuration
+           > Protocols for [NOMBRE_INSTANCIA]
+
+3. Habilitar "TCP/IP":
+   - Clic derecho en TCP/IP
+   - Propiedades
+   - Pestaña "IP Addresses"
+   - En "IPAll" verificar que el puerto sea 1433
+   - Aplicar
+
+4. Reiniciar servicio SQL Server:
+   - SQL Server Services
+   - Clic derecho en SQL Server
+   - Restart
+
+PASO 4: CONFIGURAR FIREWALL DE WINDOWS
+═══════════════════════════════════════════════════════════════
+
+EN EL SERVIDOR SQL SERVER:
+
+1. Abrir "Firewall de Windows con seguridad avanzada"
+
+2. Crear regla de entrada:
+   - Tipo: Puerto
+   - Protocolo: TCP
+   - Puerto: 1433
+   - Acción: Permitir conexión
+   - Nombre: SQL Server
+
+PASO 5: VERIFICAR SQL SERVER AUTHENTICATION
+═══════════════════════════════════════════════════════════════
+
+1. Abrir SQL Server Management Studio (SSMS)
+
+2. Conectarse al servidor
+
+3. Clic derecho en servidor > Propiedades > Security
+
+4. Verificar que esté en:
+   "SQL Server and Windows Authentication mode"
+
+5. Verificar usuario "siesa":
+   - Security > Logins > siesa
+   - ¿Existe el usuario?
+   - ¿Tiene permisos en la base de datos "Replica"?
+
+PASO 6: PROBAR CON OTRO DRIVER ODBC
+═══════════════════════════════════════════════════════════════
+
+1. Ejecutar: PROBAR_CONEXION.bat
+   Esto mostrará los drivers disponibles
+
+2. Editar config_db.py y cambiar el driver:
+
+   Opción 1:
+   'driver': '{SQL Server}'
+
+   Opción 2:
+   'driver': '{ODBC Driver 13 for SQL Server}'
+
+   Opción 3:
+   'driver': '{ODBC Driver 11 for SQL Server}'
+
+3. Guardar y probar de nuevo
+
+PASO 7: VERIFICAR CONFIGURACIÓN
+═══════════════════════════════════════════════════════════════
+
+Editar: config_db.py
+
+Verificar que los datos sean correctos:
+
+SQL_SERVER_CONFIG = {
+    'server': '192.155.0.11',       ← ¿Es la IP correcta?
+    'port': 1433,                   ← ¿Es el puerto correcto?
+    'database': 'Replica',          ← ¿Existe esta BD?
+    'username': 'siesa',            ← ¿Usuario correcto?
+    'password': '12345',            ← ¿Contraseña correcta?
+    ...
+}
+
+PASO 8: ALTERNATIVA - USAR NOMBRE DEL SERVIDOR
+═══════════════════════════════════════════════════════════════
+
+En lugar de IP, probar con nombre del servidor:
+
+'server': 'NOMBRE_SERVIDOR\\INSTANCIA'
+
+Ejemplos:
+'server': 'SERVIDOR01\\SQLEXPRESS'
+'server': 'RAYOGASSERVER\\MSSQLSERVER'
+
+PASO 9: PROBAR CONEXIÓN
+═══════════════════════════════════════════════════════════════
+
+1. Ejecutar: PROBAR_CONEXION.bat
+
+2. Ver resultado del diagnóstico
+
+3. Si funciona, ejecutar la aplicación:
+   python rayogas_formulario.py
+
+AYUDA ADICIONAL
+═══════════════════════════════════════════════════════════════
+
+Si nada funciona, contactar al administrador del servidor SQL
+para verificar:
+
+1. ¿El servidor permite conexiones remotas?
+2. ¿El usuario "siesa" tiene permisos?
+3. ¿La base de datos "Replica" existe?
+4. ¿Hay alguna política de seguridad bloqueando?
+
+También puede probar conectarse con SQL Server Management Studio
+desde su computadora usando las mismas credenciales.
+
+═══════════════════════════════════════════════════════════════

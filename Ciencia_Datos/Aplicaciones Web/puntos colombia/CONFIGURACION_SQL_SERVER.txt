@@ -1,0 +1,46 @@
+═══════════════════════════════════════════════════════════════
+  CONFIGURACIÓN SQL SERVER - RAYOGAS ESP
+═══════════════════════════════════════════════════════════════
+
+DATOS DE CONEXIÓN CONFIGURADOS:
+  Servidor: 192.155.0.22
+  Base de datos: Replica
+  Usuario: siesarayo
+  Contraseña: SisR@yos.2017
+
+IMPORTANTE:
+  Los datos de conexión están guardados en el archivo: config_db.py
+  Si necesita cambiarlos, edite ese archivo.
+
+TABLAS CREADAS AUTOMÁTICAMENTE:
+  1. clientes_creados
+     - Campos: id, fecha_registro, nombre_completo, cedula,
+               direccion, zona, puntos_acumulados
+
+  2. clientes_nuevos
+     - Campos: id, fecha_registro, nombre_completo, cedula,
+               celular, ciudad, zona, direccion, uso_gas,
+               inscrito_puntos, monto_compra, puntos_acumulados,
+               autorizacion_datos, archivo_cedula
+
+REQUISITOS:
+  1. Python 3.7 o superior
+  2. pyodbc instalado (ejecutar INSTALAR_DEPENDENCIAS.bat)
+  3. ODBC Driver 17 for SQL Server instalado en Windows
+
+INSTALACIÓN DEL DRIVER ODBC:
+  Si la aplicación muestra error de conexión, descargue e instale:
+
+  ODBC Driver 17 for SQL Server:
+  https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server
+
+  Alternativamente, puede cambiar el driver en config_db.py:
+  'driver': '{SQL Server}'  # En lugar de ODBC Driver 17
+
+TROUBLESHOOTING:
+  - Error de conexión: Verifique que el servidor SQL esté accesible
+  - Error de driver: Instale ODBC Driver o cambie en config_db.py
+  - Error de credenciales: Verifique usuario y contraseña en config_db.py
+  - Firewall: Asegúrese que el puerto 1433 esté abierto
+
+═══════════════════════════════════════════════════════════════

@@ -1,0 +1,21 @@
+# Entornos virtuales de Python
+env/
+venv/
+.venv/
+ENV/
+
+# Cache de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db

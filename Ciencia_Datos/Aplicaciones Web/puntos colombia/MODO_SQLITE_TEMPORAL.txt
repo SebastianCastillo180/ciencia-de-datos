@@ -1,0 +1,103 @@
+═══════════════════════════════════════════════════════════════
+  SOLUCIÓN TEMPORAL: USO DE SQLITE
+  Formulario Rayogas ESP - Puntos Colombia
+═══════════════════════════════════════════════════════════════
+
+PROBLEMA IDENTIFICADO:
+  El servidor SQL Server (192.155.0.22) no es accesible desde
+  su computadora debido a problemas de red/conectividad.
+
+SOLUCIÓN IMPLEMENTADA:
+  La aplicación ahora puede funcionar en DOS MODOS:
+
+  1. MODO SQLITE (Temporal - ACTIVO)
+     - Guarda datos localmente en el archivo: rayogas_puntos.db
+     - No requiere conexión de red
+     - Funciona inmediatamente
+     - Los datos se pueden migrar a SQL Server después
+
+  2. MODO SQL SERVER (Cuando el servidor esté accesible)
+     - Guarda datos directamente en el servidor
+     - Requiere conexión de red al servidor
+
+CÓMO FUNCIONA AHORA:
+═══════════════════════════════════════════════════════════════
+
+1. Por defecto, usa SQLITE (modo temporal)
+2. Los datos se guardan en: rayogas_puntos.db
+3. Puedes usar la aplicación normalmente
+4. Cuando el servidor SQL esté disponible, cambiar a modo SQL Server
+
+CÓMO CAMBIAR AL MODO SQL SERVER:
+═══════════════════════════════════════════════════════════════
+
+Cuando el problema de red se resuelva:
+
+1. Abrir el archivo: config_db.py
+
+2. Buscar la línea:
+   MODO_BD = 'sqlite'
+
+3. Cambiar a:
+   MODO_BD = 'sqlserver'
+
+4. Guardar y ejecutar la aplicación
+
+MIGRAR DATOS DE SQLITE A SQL SERVER:
+═══════════════════════════════════════════════════════════════
+
+Si necesita migrar los datos guardados localmente al servidor:
+
+1. Los datos están en: rayogas_puntos.db
+2. Podemos crear un script de migración
+3. Contacte al desarrollador para asistencia
+
+ARCHIVOS IMPORTANTES:
+═══════════════════════════════════════════════════════════════
+
+- rayogas_puntos.db → Base de datos local (se crea automáticamente)
+- config_db.py → Configuración de base de datos
+- uploads/ → Archivos adjuntos (fotos de cédulas)
+
+VENTAJAS DE SQLITE TEMPORAL:
+═══════════════════════════════════════════════════════════════
+
+✓ Funciona sin conexión de red
+✓ No requiere configuración adicional
+✓ Datos seguros en tu computadora
+✓ Fácil de migrar después
+✓ Mismo formato de datos
+
+PRÓXIMOS PASOS:
+═══════════════════════════════════════════════════════════════
+
+1. AHORA: Usar la aplicación con SQLite
+2. DESPUÉS: Resolver problema de red con IT
+3. CUANDO ESTÉ LISTO: Cambiar a SQL Server
+4. OPCIONAL: Migrar datos acumulados
+
+VERIFICAR PROBLEMA DE RED:
+═══════════════════════════════════════════════════════════════
+
+Para verificar cuándo el servidor esté disponible:
+
+1. Abrir CMD
+2. Ejecutar: ping 192.155.0.22
+3. Si responde → El servidor es accesible
+4. Si no responde → Aún hay problema de red
+
+CONTACTO CON IT:
+═══════════════════════════════════════════════════════════════
+
+Preguntas para el administrador de red/IT:
+
+1. ¿La IP 192.155.0.22 es correcta para SQL Server?
+2. ¿Necesito estar conectado a VPN?
+3. ¿Está habilitado el acceso remoto al servidor SQL?
+4. ¿El puerto 1433 está abierto en el firewall?
+5. ¿Mi computadora tiene permiso para acceder?
+
+═══════════════════════════════════════════════════════════════
+  ¡La aplicación está lista para usarse con SQLite!
+  Ejecutar: python rayogas_formulario.py
+═══════════════════════════════════════════════════════════════

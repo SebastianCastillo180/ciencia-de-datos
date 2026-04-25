@@ -1,0 +1,11 @@
+1. Se ejecuta el programa de env
+- python -m venv env
+- pip install streamlit==1.44.0
+
+
+2. Activamos el env
+- source env/Scripts/activate
+
+3. Ejecutamos el archivo
+- streamlit run el_buen_vivir.py
+

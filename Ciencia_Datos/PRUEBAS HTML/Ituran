@@ -1,0 +1,52 @@
+
+### https://www.youtube.com/watch?v=wcTsCZzXqM8
+###########################################################################################
+###########################################################################################
+### Conexión a base de datos SQL Server usando pyodbc y pandas
+
+### pip install pyodbc
+import pyodbc 
+import pandas as pd
+
+
+###########################################################################################
+##### Credenciales de la base de datos
+server = '192.168.0.133'
+database = 'Datalake'
+username = 'siesarayo'
+password = 'SisR@yos.2017'
+
+###########################################################################################
+# Definimos la cadena de conexión usando f-strings para insertar las variables
+# Nota: Quitamos Trusted_Connection=yes porque se esta usando usuario y contraseña
+
+conn_str = (
+    f"Driver={{SQL Server}};"
+    f"Server={server};"
+    f"Database={database};"
+    f"UID={username};"
+    f"PWD={password};"
+)
+
+###########################################################################################
+try:
+### Solo necesitamos llamar a connect una vez
+    conexion = pyodbc.connect(conn_str)
+    print('Conexión Exitosa')
+    
+#### Ejecutamos la Información y la guardamos en la memoria
+    cursor = conexion.cursor()
+
+#### Llamamos la base de Datos de Ituran
+    query_Ventas = "SELECT TOP 100 * FROM itu.Tb_Ituran_002_Viajes"
+    df = pd.read_sql(query_Ventas, conexion)
+    
+    print(df)
+
+except Exception as e:
+    print(f'Error en conexión: {e}')
+
+
+    ###(df.dataframe)  # Intentar imprimir el DataFrame si la conexión falla
+
+    

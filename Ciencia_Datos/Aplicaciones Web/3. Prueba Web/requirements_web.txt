@@ -1,0 +1,28 @@
+# Dependencias del Sistema Web de Legalización de Gastos
+# Python 3.7+
+
+# Framework Web
+Flask>=3.0.0
+Werkzeug>=3.0.0
+
+# Base de Datos SQL Server
+pyodbc>=4.0.30
+
+# Dependencias adicionales incluidas con Flask
+# - Jinja2 (templates)
+# - MarkupSafe (seguridad)
+# - click (CLI)
+# - itsdangerous (sesiones)
+
+# Opcional: Para producción con Gunicorn
+# gunicorn>=21.0.0
+
+# Opcional: Para desarrollo
+# flask-cors>=4.0.0  # Si necesitas CORS
+# python-dotenv>=1.0.0  # Para variables de entorno
+
+# Opcional: Para mejoras futuras
+# Pillow>=10.0.0  # Para manejo de imágenes
+# openpyxl>=3.1.0  # Para exportar a Excel
+# reportlab>=4.0.0  # Para generar PDFs
+# sendgrid>=6.0.0  # Para envío de emails

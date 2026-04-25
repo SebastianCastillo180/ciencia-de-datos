@@ -1,0 +1,132 @@
+================================================================================
+   SISTEMA WEB DE LEGALIZACION DE GASTOS PARA CONDUCTORES
+================================================================================
+
+¡BIENVENIDO!
+
+Este sistema le permite a conductores y empresas de transporte gestionar
+la legalización de gastos de manera digital y eficiente.
+
+
+>> INICIO RAPIDO <<
+
+1. Instalar dependencias:
+   pip install flask werkzeug pyodbc
+
+2. Configurar SQL Server en app.py (lineas 19-25)
+   - Cambiar 'server', 'username', 'password'
+
+3. Ejecutar:
+   python app.py
+
+4. Abrir navegador:
+   http://localhost:5000
+
+5. Login:
+   Usuario: ADMIN
+   Contraseña: admin123
+
+
+>> ARCHIVOS IMPORTANTES <<
+
+📄 app.py - Aplicación principal (EJECUTAR ESTE)
+📄 README_WEB.md - Documentación completa
+📄 INICIO_RAPIDO.md - Guía rápida de inicio
+📄 requirements_web.txt - Dependencias Python
+📁 templates/ - Plantillas HTML
+📁 static/ - Archivos CSS/JS
+
+
+>> FUNCIONALIDADES <<
+
+✓ Registro de conductores
+✓ Login seguro con contraseña encriptada
+✓ Registrar gastos (combustible, peajes, mantenimiento, etc.)
+✓ Aprobar/rechazar gastos (admin/supervisor)
+✓ Dashboard con estadísticas
+✓ Filtros avanzados
+✓ Reportes por conductor
+✓ Sistema de roles (conductor, supervisor, admin)
+✓ Responsive (funciona en móvil)
+
+
+>> TIPOS DE GASTOS <<
+
+- Combustible
+- Peajes
+- Parqueadero
+- Mantenimiento
+- Alimentación
+- Hospedaje
+- Lavado de vehículo
+- Otros
+
+
+>> ROLES DE USUARIO <<
+
+CONDUCTOR: Registra y gestiona sus gastos
+SUPERVISOR: Aprueba/rechaza gastos
+ADMIN: Control total del sistema
+
+
+>> REQUISITOS <<
+
+- Python 3.7+
+- SQL Server 2016+
+- ODBC Driver 17 for SQL Server
+- Navegador moderno
+
+
+>> SOPORTE <<
+
+Si tienes problemas:
+1. Leer README_WEB.md
+2. Leer INICIO_RAPIDO.md
+3. Verificar configuración SQL Server
+4. Revisar logs en la consola
+
+
+>> SEGURIDAD <<
+
+✓ Contraseñas encriptadas con PBKDF2
+✓ Sesiones seguras
+✓ Control de acceso por roles
+✓ Protección contra SQL Injection
+
+
+>> CREDENCIALES POR DEFECTO <<
+
+Usuario: ADMIN
+Contraseña: admin123
+
+⚠️ CAMBIAR ESTAS CREDENCIALES EN PRODUCCIÓN
+
+
+>> BASE DE DATOS <<
+
+Nombre: GastosConductoresDB
+Tablas:
+- Conductores (usuarios)
+- Gastos (registros de gastos)
+- Rutas (rutas realizadas)
+- Vehiculos (información de vehículos)
+
+La base de datos se crea automáticamente al iniciar la aplicación.
+
+
+>> CONTACTO <<
+
+Para más información, consultar la documentación completa en:
+- README_WEB.md (guía completa)
+- INICIO_RAPIDO.md (inicio rápido)
+
+
+================================================================================
+                       ¡SISTEMA LISTO PARA USAR!
+================================================================================
+
+Desarrollado con Python + Flask + SQL Server
+Bootstrap 5 + Bootstrap Icons
+
+© 2025 - Sistema de Gestión de Gastos
+================================================================================

@@ -1,0 +1,4 @@
+# Dependencias opcionales para mejor calidad de logo
+# La aplicación funciona sin esto, pero recomendado para mejor visualización
+
+Pillow>=10.0.0
